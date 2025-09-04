@@ -28,7 +28,8 @@ if __name__ == "__main__":
     commands = [
         ("npm install", "./web"),
         ("npm run build", "./web"),
-        ("cp -R ../web/build/* ../mobile/android/www", "./web")
+        ("cp -R ../web/build/* ../mobile/android/www", "./web"),
+        ("cp -R ../web/build/* ../mobile/ios/www", "./web")
     ]
     run_commands(commands)
 

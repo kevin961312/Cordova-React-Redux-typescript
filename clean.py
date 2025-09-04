@@ -55,6 +55,6 @@ if __name__ == "__main__":
     # Call the function
     delete_files_and_folders(project_dir, folders, files, True)
     clean_folder("mobile/android/www")
+    clean_folder("mobile/ios/www")
 
-    # run_command("npm i", "./web")
 

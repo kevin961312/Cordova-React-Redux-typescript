@@ -1,0 +1,5 @@
+.other-main { min-height:calc(100vh - 56px); display:flex; align-items:center; justify-content:center; padding:2rem 1rem; background:#ffffff; }
+.other-card { background:#ffffff; width:100%; max-width:560px; border:1px solid #e0e0e0; border-radius:12px; padding:2rem; box-shadow:0 4px 16px rgba(0,0,0,0.08); text-align:center; animation:fadeIn .4s ease; }
+.other-card h2 { margin-top:0; color:#1976d2; }
+.other-card p { margin:0 0 1.25rem; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px);} to { opacity:1; transform:translateY(0);} }

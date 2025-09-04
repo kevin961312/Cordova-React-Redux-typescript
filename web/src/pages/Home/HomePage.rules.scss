@@ -1,0 +1,17 @@
+// Styles scoped for HomePage only
+// Layout specific to HomePage only
+.home-layout { min-height:100vh; display:flex; flex-direction:column; background:#ffffff; }
+
+
+.home-main { flex:1; display:flex; align-items:center; justify-content:center; padding:2rem 1rem; }
+.home-page-wrapper { background:#ffffff; width:100%; max-width:640px; border:1px solid #e0e0e0; border-radius:12px; padding:2rem; box-shadow:0 4px 16px rgba(0,0,0,0.08); text-align:center; animation:fadeIn .4s ease; }
+.home-page-wrapper h2 { margin-top:0; color:#1976d2; }
+.home-page-wrapper p { margin:0 0 1.25rem; }
+
+
+	// Burger button styling leverages global .burger rules already present
+
+@keyframes fadeIn {
+	from { opacity:0; transform:translateY(8px); }
+	to { opacity:1; transform:translateY(0); }
+}
