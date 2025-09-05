@@ -29,7 +29,8 @@ if __name__ == "__main__":
         ("npm install", "./web"),
         ("npm run build", "./web"),
         ("cp -R ../web/build/* ../mobile/android/www", "./web"),
-        ("cp -R ../web/build/* ../mobile/ios/www", "./web")
+        ("cp -R ../web/build/* ../mobile/ios/www", "./web"),
+        ("cordova platform update android && cordova clean android && cordova build android", "./mobile/android")
     ]
     run_commands(commands)
 

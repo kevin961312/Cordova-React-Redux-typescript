@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1088874810667",
+    "project_id": "directotysources",
+    "storage_bucket": "directotysources.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088874810667:android:22f5a8d52aa950bc14c96e",
+        "android_client_info": {
+          "package_name": "com.elTiempo.DirectorySources"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIcCZjUl7S46-j-13pco6J_kv2zEFmjA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
