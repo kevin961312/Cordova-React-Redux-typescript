@@ -9,4 +9,9 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <plugin name="cleafy-cordova-plugin" spec="file:../../pkg/PluginCleafy" />
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:debuggable="true" xmlns:android="http://schemas.android.com/apk/res/android" />
+        </edit-config>
+    </platform>
 </widget>

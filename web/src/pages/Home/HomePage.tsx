@@ -7,8 +7,8 @@ import { CleafyConfiguration } from '../../services/cleafy';
 import './HomePage.rules.scss';
 
 const DEFAULT_CONFIG: CleafyConfiguration = {
-  apiEndpoint: 'https://api.cleafy.com',
-  applicationHostname: 'com.elTiempo.DirectorySources',
+  apiEndpoint: "https://c4cs1.cleafy.cloud",
+  applicationHostname: "test.cesar.com:8089",
   isDefaultEnabled: true,
   automaticUpdateAnalysis: 'NONE',
   emulatorDebugAnalysis: 'NONE',
@@ -20,7 +20,7 @@ const DEFAULT_CONFIG: CleafyConfiguration = {
   detectorsConfiguration: {
     isHttpDetectorEnabled: false,
     isCertDetectorEnabled: false,
-    certDetectorEndpoint: '',
+    certDetectorEndpoint: "https://c4cs1.cleafy.cloud",
     isMonitoredAppEnabled: true,
     isActivityDetectorEnabled: false,
     isAdvancedHttpCertDetectorEnabled: false,

@@ -93,6 +93,7 @@ export function useCleafy() {
     setState((prev) => ({ ...prev, loading: true, error: null }));
     try {
       const diag = await getDiagnostics();
+      console.log('Diagnostics fetched:', JSON.stringify(diag, null, 2));
       setState((prev) => ({ ...prev, diagnostics: diag, loading: false }));
     } catch (err) {
       setState((prev) => ({ ...prev, error: String(err), loading: false }));

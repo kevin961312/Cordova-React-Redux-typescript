@@ -39,7 +39,7 @@ public class CleafyCordovaPlugin extends CordovaPlugin {
         actions.put("getParentId", this::getParentId);
         actions.put("getApplicationHostname", this::getApplicationHostname);
         actions.put("getVersion", this::getVersion);
-        actions.put("getDeviceId", this::getDeviceId)
+        actions.put("getDeviceId", this::getDeviceId);
 
         actions.put("setLocation", this::setLocation);
         actions.put("setAppSessionId", this::setAppSessionId);

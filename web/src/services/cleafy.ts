@@ -112,7 +112,15 @@ export function updateDetection(): Promise<void> {
 export function getDiagnostics(): Promise<AgentDiagnostics> {
   return new Promise((resolve, reject) => {
     if (!isCleafyAvailable()) return reject("Cleafy plugin not available");
-    window.Cleafy!.getDiagnostics((data) => resolve(data), (err) => reject(err));
+    window.Cleafy!.getDiagnostics((data) => {
+      // The plugin may return probeTraces/errors as JSON strings instead of arrays
+      const parsed: AgentDiagnostics = {
+        ...data,
+        probeTraces: typeof data.probeTraces === 'string' ? JSON.parse(data.probeTraces) : data.probeTraces,
+        errors: typeof data.errors === 'string' ? JSON.parse(data.errors) : data.errors,
+      };
+      resolve(parsed);
+    }, (err) => reject(err));
   });
 }
 
