@@ -29,7 +29,9 @@ if __name__ == "__main__":
         ("npm install", "./web"),
         ("npm run build", "./web"),
         ("mkdir -p ../mobile/android/www && cp -R ../web/build/* ../mobile/android/www", "./web"),
-        ("mkdir -p ../mobile/ios/www && cp -R ../web/build/* ../mobile/ios/www", "./web")
+        ("mkdir -p ../mobile/ios/www && cp -R ../web/build/* ../mobile/ios/www", "./web"),
+        ("cordova platform add android", "./mobile/android"),
+        ("cordova platform add ios", "./mobile/ios"),
     ]
     run_commands(commands)
 
