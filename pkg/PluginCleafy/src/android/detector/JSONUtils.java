@@ -60,11 +60,14 @@ class JSONUtils {
                 .advancedMockLocationDetectorEnabled(detectorsJson.getBoolean("isAdvancedMockLocationDetectorEnabled"))
                 .onCallDetectorEnabled(detectorsJson.getBoolean("isOnCallDetectorEnabled"))
                 .humanDetectorEnabled(detectorsJson.getBoolean("isHumanDetectorEnabled"))
+                .nfcDetectorEnabled(detectorsJson.getBoolean("isNfcDetectorEnabled"))
+                .gpsDetectorEnabled(detectorsJson.getBoolean("isGpsDetectorEnabled"))
                 .build();
 
         return new CleafyConfigurationBuilder()
                 .apiEndpoint(jsonObject.getString("apiEndpoint"))
                 .applicationHostname(jsonObject.getString("applicationHostname"))
+                .integrationToken(jsonObject.optString("integrationToken", ""))
                 .defaultEnabled(jsonObject.getBoolean("isDefaultEnabled"))
                 .automaticUpdateAnalysis(AutomaticUpdateAnalysis.valueOf(jsonObject.getString("automaticUpdateAnalysis")))
                 .emulatorDebugAnalysis(EmulatorDebugAnalysis.valueOf(jsonObject.getString("emulatorDebugAnalysis")))

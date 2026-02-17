@@ -9,6 +9,7 @@ import './HomePage.rules.scss';
 const DEFAULT_CONFIG: CleafyConfiguration = {
   apiEndpoint: "https://c4cs1.cleafy.cloud",
   applicationHostname: "test.cesar.com:8089",
+  integrationToken: "c4cs1tokensecret",
   isDefaultEnabled: true,
   automaticUpdateAnalysis: 'NONE',
   emulatorDebugAnalysis: 'NONE',

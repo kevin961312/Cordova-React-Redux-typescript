@@ -1,7 +1,7 @@
 framework module Cleafy {
   umbrella header "Cleafy.h"
-
   export *
+
   module * { export * }
 }
 

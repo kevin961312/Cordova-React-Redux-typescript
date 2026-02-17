@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Cleafy-Swift.h</key>
 		<data>
-		zGqbK0g3RT7/A+sVu5cHjrzEHRE=
+		Nb217KllFJs8y4t2QaFXrLVvoSs=
 		</data>
 		<key>Headers/Cleafy.h</key>
 		<data>
@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Cn97Be3gnffbDFXmem6iU1X3DSY=
+		7BuyvuG5ONv/5cpMTxI80rloEg8=
 		</data>
 		<key>Modules/Cleafy.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		wS9pRBTNG/IA5uttPRLuwalkrps=
+		9utw9W/gVm7GJRdviSfPWYT5TPo=
 		</data>
 		<key>Modules/Cleafy.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		VW0iDV/tD2srl2mvGdrTns4BoiQ=
+		Br96tOo/5W8pbzqgiTVzw4oH9QE=
 		</data>
 		<key>Modules/Cleafy.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		THr/Ah9w0I5sMvg6t2s6bINU1Qc=
+		KewdgHQkafhUCVpCa80VsE9fx5c=
 		</data>
 		<key>Modules/Cleafy.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		VW0iDV/tD2srl2mvGdrTns4BoiQ=
+		Br96tOo/5W8pbzqgiTVzw4oH9QE=
 		</data>
 		<key>Modules/Cleafy.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		o1w4o+M7Hi5A8M8p7DwWW7oJPoc=
+		dSOI3hocK9ZHpTNLp50/hRQ6j9A=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		RVZRc0iT7yMpFXQT7pOFHpgbmaU=
+		cC2p8PVg++pi6+lvusBCkuFactg=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KfKDSLuNJchjXOqjBTjDi+GkiGWEWHvDmSIV1f3ZeL0=
+			M/CMfvTtr0eBKCE2YDothUbK2T2jwA7MR8WggqL/xPE=
 			</data>
 		</dict>
 		<key>Headers/Cleafy.h</key>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ENlLOhPpwqTTXosp+jSRfi6SH6R3sMe6Uh8kq+u5Geg=
+			ofZKMi5jzAImciVMZgAhhCDfC6s+s2ODCsrxZ+ykibQ=
 			</data>
 		</dict>
 		<key>Modules/Cleafy.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WCEMRyQn0Q5lFr+Qe1ErIXANvL9I7V2liESlSD08524=
+			ySiqiqVt63dlqOBFD2BVeO2LEOU+TYGv/+qQvKStRdU=
 			</data>
 		</dict>
 		<key>Modules/Cleafy.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AgMPEWURFX7XeYCwRLu+n6JOICRPi3vIufkc6xmI+yI=
+			5c0Q9yCeKTaY9ihPrLTxrwuHh0mQaNSfHYeYe/Mk7iY=
 			</data>
 		</dict>
 		<key>Modules/Cleafy.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WCEMRyQn0Q5lFr+Qe1ErIXANvL9I7V2liESlSD08524=
+			ySiqiqVt63dlqOBFD2BVeO2LEOU+TYGv/+qQvKStRdU=
 			</data>
 		</dict>
 		<key>Modules/Cleafy.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eh9fh8GgddOB+DKELIZedQXoPx1/L4WvRQiCZdkBaQ4=
+			FW4F4tpMtXyZ9laKD502w0zMQgzWJ1xpa3src2NLLfw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7dXeQgMB5T0cR0AwmPRKxSV1OtFWmF95RmP8l2gW3oo=
+			6otBku9nRzhTfeYMtykvDBcE9czLnzYB8ejfrvvzHw8=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>

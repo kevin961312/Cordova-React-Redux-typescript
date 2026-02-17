@@ -17,6 +17,7 @@ export type AgentDiagnostics = {
 export type CleafyConfiguration = {
     apiEndpoint: string;
     applicationHostname: string;
+    integrationToken: string;
     isDefaultEnabled: boolean;
     automaticUpdateAnalysis: "NONE" | "FOREGROUND";
     emulatorDebugAnalysis: "NONE" | "BASIC" | "ADVANCED";
@@ -40,6 +41,8 @@ export type CleafyDetectorsConfiguration = {
     isAdvancedMockLocationDetectorEnabled: boolean;
     isOnCallDetectorEnabled: boolean;
     isHumanDetectorEnabled: boolean;
+    isNfcDetectorEnabled: boolean;
+    isGpsDetectorEnabled: boolean;
 };
 export interface CleafyPlugin {
     initWithConfiguration(onSuccess: Callback<void>, onError: Callback<string>, configuration: CleafyConfiguration): void;
@@ -59,7 +62,7 @@ export interface CleafyPlugin {
     setAppDeviceId(onSuccess: Callback<string>, onError: Callback<string>, appDeviceId: string): void;
     registerLocationListener(onSuccess: Callback<void>, onError: Callback<string>, provider?: string, minTime?: number, minDistance?: number): void;
 }
-export declare function initWithConfiguration(onSuccess: Callback<void>, onError: Callback<string>, { apiEndpoint, applicationHostname, isDefaultEnabled, automaticUpdateAnalysis, emulatorDebugAnalysis, isPackageAnalysisEnabled, isExtendedPackageInformation, isSensitiveIdentifierCollectionEnabled, isHashSensitiveIdentifiers, isAllowUntrustedCertificates, detectorsConfiguration: { isHttpDetectorEnabled, isCertDetectorEnabled, certDetectorEndpoint, isMonitoredAppEnabled, isActivityDetectorEnabled, isAdvancedHttpCertDetectorEnabled, isRootDetectorEnabled, isTaskInjectionEnabled, isMockLocationDetectorEnabled, isAdvancedMockLocationDetectorEnabled, isOnCallDetectorEnabled, isHumanDetectorEnabled, }, }: CleafyConfiguration): void;
+export declare function initWithConfiguration(onSuccess: Callback<void>, onError: Callback<string>, { apiEndpoint, applicationHostname, integrationToken, isDefaultEnabled, automaticUpdateAnalysis, emulatorDebugAnalysis, isPackageAnalysisEnabled, isExtendedPackageInformation, isSensitiveIdentifierCollectionEnabled, isHashSensitiveIdentifiers, isAllowUntrustedCertificates, detectorsConfiguration: { isHttpDetectorEnabled, isCertDetectorEnabled, certDetectorEndpoint, isMonitoredAppEnabled, isActivityDetectorEnabled, isAdvancedHttpCertDetectorEnabled, isRootDetectorEnabled, isTaskInjectionEnabled, isMockLocationDetectorEnabled, isAdvancedMockLocationDetectorEnabled, isOnCallDetectorEnabled, isHumanDetectorEnabled, isNfcDetectorEnabled, isGpsDetectorEnabled }, }: CleafyConfiguration): void;
 export declare function invalidateSession(onSuccess: Callback<void>, onError: Callback<string>): void;
 export declare function updateDetection(onSuccess: Callback<void>, onError: Callback<string>): void;
 export declare function getDiagnostics(onSuccess: Callback<AgentDiagnostics>, onError: Callback<string>): void;
@@ -69,6 +72,7 @@ export declare function getBrowserId(onSuccess: Callback<string>, onError: Callb
 export declare function getParentId(onSuccess: Callback<string>, onError: Callback<string>): void;
 export declare function getApplicationHostname(onSuccess: Callback<string>, onError: Callback<string>): void;
 export declare function getVersion(onSuccess: Callback<string>, onError: Callback<string>): void;
+export declare function getDeviceId(onSuccess: Callback<string>, onError: Callback<string>): void;
 export declare function setLocation(onSuccess: Callback<string>, onError: Callback<string>, location: string): void;
 export declare function setAppSessionId(onSuccess: Callback<string>, onError: Callback<string>, appSessionId: string): void;
 export declare function setUserId(onSuccess: Callback<string>, onError: Callback<string>, userId: string): void;

@@ -36,6 +36,7 @@ export type CleafyDetectorsConfiguration = {
 export type CleafyConfiguration = {
   apiEndpoint: string;
   applicationHostname: string;
+  integrationToken: string;
   isDefaultEnabled: boolean;
   automaticUpdateAnalysis: "NONE" | "FOREGROUND";
   emulatorDebugAnalysis: "NONE" | "BASIC" | "ADVANCED";

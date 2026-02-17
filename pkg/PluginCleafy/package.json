@@ -1,6 +1,6 @@
 {
   "name": "cleafy-cordova-plugin",
-  "version": "2.1.0",
+  "version": "2.7.0",
   "description": "Apache Cordova plugin wrapping the Cleafy Mobile SDK.",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "www/CleafyCordovaPlugin.js",

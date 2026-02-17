@@ -39,7 +39,7 @@ extension CleafyCordovaPlugin {
     
     func onDiagnosticsWithErrorAvailable(diagnosticsProvider: any Cleafy.AgentDiagnosticsProvider, error: String) {
       let pluginResult: CDVPluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: [error])
-      pluginResult.keepCallback = true
+      pluginResult.setKeepCallbackAs(true)
       plugin?.commandDelegate?.send(pluginResult, callbackId: callbackId)
     }
   }

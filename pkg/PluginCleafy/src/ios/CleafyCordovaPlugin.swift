@@ -12,29 +12,27 @@ class CleafyCordovaPlugin: CDVPlugin {
     }
     
     let detectorsDict = configDict["detectorsConfiguration"] as? [String: Any] ?? [:]
+    let isHumanDetectorEnabled = detectorsDict["isHumanDetectorEnabled"] as? Bool ?? DefaultConfiguration.humanDetectorEnabled
+    let configuration = CleafyConfigurationBuilder()
+      .apiEndpoint(configDict["apiEndpoint"] as! String)
+      .applicationHostname(configDict["applicationHostname"] as! String)
+      .integrationToken(configDict["integrationToken"] as? String ?? "")
+      .defaultEnabled(configDict["isDefaultEnabled"] as? Bool ?? DefaultConfiguration.defaultEnabled)
+      .automaticUpdateAnalysis(configDict["automaticUpdateAnalysis"] as? AutomaticUpdateAnalysis ?? DefaultConfiguration.automaticUpdateAnalysis)
+      .allowUntrustedCertificates(configDict["isAllowUntrustedCertificates"] as? Bool ?? DefaultConfiguration.allowUntrustedCertificates)
+      .monitoredAppEnabled(detectorsDict["isMonitoredAppEnabled"] as? Bool ?? DefaultConfiguration.monitoredAppEnabled)
+      .httpDetectorEnabled(detectorsDict["isHttpDetectorEnabled"] as? Bool ?? DefaultConfiguration.httpDetectorEnabled)
+      .certDetectorEnabled(detectorsDict["isCertDetectorEnabled"] as? Bool ?? DefaultConfiguration.certDetectorEnabled)
+      .certDetectorEndpoint(detectorsDict["certDetectorEndpoint"] as? String ?? "")
+      .advancedCertDetectorEnabled(detectorsDict["isAdvancedHttpCertDetectorEnabled"] as? Bool ?? DefaultConfiguration.advancedCertDetectorEnabled)
+      .rootDetectorEnabled(detectorsDict["isRootDetectorEnabled"] as? Bool ?? DefaultConfiguration.rootDetectorEnabled)
+      .mockLocationDetectorEnabled(detectorsDict["isMockLocationDetectorEnabled"] as? Bool ?? DefaultConfiguration.mockLocationDetectorEnabled)
+      .onCallDetectorEnabled(detectorsDict["isOnCallDetectorEnabled"] as? Bool ?? DefaultConfiguration.onCallDetectorEnabled)
+      .humanDetectorEnabled(isHumanDetectorEnabled)
+      .gpsDetectorEnabled(detectorsDict["isGpsDetectorEnabled"] as? Bool ?? DefaultConfiguration.gpsDetectorEnabled)
+      .build()
     
-    let detectorsConfiguration = CleafyDetectorsConfiguration(
-      monitoredAppEnabled: detectorsDict["isMonitoredAppEnabled"] as? Bool ?? DefaultConfiguration.monitoredAppEnabled,
-      httpDetectorEnabled: detectorsDict["isHttpDetectorEnabled"] as? Bool ?? DefaultConfiguration.httpDetectorEnabled,
-      certDetectorEnabled: detectorsDict["isCertDetectorEnabled"] as? Bool ?? DefaultConfiguration.certDetectorEnabled,
-      certDetectorEndpoint: detectorsDict["certDetectorEndpoint"] as? String ?? "",
-      advancedCertDetectorEnabled: detectorsDict["isAdvancedHttpCertDetectorEnabled"] as? Bool ?? DefaultConfiguration.advancedCertDetectorEnabled,
-      rootDetectorEnabled: detectorsDict["isRootDetectorEnabled"] as? Bool ?? DefaultConfiguration.rootDetectorEnabled,
-      mockLocationDetectorEnabled: detectorsDict["isMockLocationDetectorEnabled"] as? Bool ?? DefaultConfiguration.mockLocationDetectorEnabled,
-      onCallDetectorEnabled: detectorsDict["isOnCallDetectorEnabled"] as? Bool ?? DefaultConfiguration.onCallDetectorEnabled,
-      humanDetectorEnabled: detectorsDict["isHumanDetectorEnabled"] as? Bool ?? DefaultConfiguration.humanDetectorEnabled
-    )
-    
-    let configuration = CleafyConfiguration(
-      apiEndpoint: configDict["apiEndpoint"] as! String,
-      applicationHostname: configDict["applicationHostname"] as! String,
-      defaultEnabled: configDict["isDefaultEnabled"] as? Bool ?? DefaultConfiguration.defaultEnabled,
-      automaticUpdateAnalysis: configDict["automaticUpdateAnalysis"] as? AutomaticUpdateAnalysis ?? DefaultConfiguration.automaticUpdateAnalysis,
-      allowUntrustedCertificates: configDict["isAllowUntrustedCertificates"] as? Bool ?? DefaultConfiguration.allowUntrustedCertificates,
-      detectors: detectorsConfiguration
-    )
-    
-    let motionManager = detectorsConfiguration.isHumanDetectorEnabled ? CMMotionManager() : nil;
+    let motionManager = isHumanDetectorEnabled ? CMMotionManager() : nil;
     
     Cleafy.initWith(configuration: configuration, motionManager: motionManager)
     success(command, with: "Agent initialized")
