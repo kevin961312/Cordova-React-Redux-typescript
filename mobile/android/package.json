@@ -13,6 +13,7 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
+    "cleafy-cordova-plugin": "file:PluginCleafy",
     "cordova-android": "^14.0.1",
     "cordova-ios": "^7.1.1",
     "cordova-plugin-device": "^3.0.0"
@@ -23,7 +24,8 @@
       "ios"
     ],
     "plugins": {
-      "cordova-plugin-device": {}
+      "cordova-plugin-device": {},
+      "cleafy-cordova-plugin": {}
     }
   }
 }
