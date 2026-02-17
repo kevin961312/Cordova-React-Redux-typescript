@@ -8,4 +8,5 @@
     <content src="public/index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <plugin name="cleafy-cordova-plugin" spec="file:../../pkg/PluginCleafy" />
 </widget>
